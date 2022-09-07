@@ -1,0 +1,68 @@
+<section>
+  <fieldset>
+    <label for="">Rut único</label>
+    <input
+      type="text"
+      name="rut"
+      [value]="nuevoHistorial.rut"
+      (input)="cambiarRut($event)"
+      >
+      <p>{{ nuevoHistorial.rut }}</p>
+  </fieldset>
+  <fieldset>
+    <label for="">Nombre</label>
+    <input
+      type="text"
+      name="nombre"
+      [value]="nuevoHistorial.nombre"
+      (input)="cambiarNombre($event)"
+      >
+      <p>{{ nuevoHistorial.nombre }}</p>
+
+  </fieldset>
+
+  <fieldset>
+    <label for="">Apellido</label>
+    <input
+    type="text"
+    name="nombre"
+    [value]="nuevoHistorial.apellido"
+    (input)="cambiarApellido($event)"
+    >
+    <p>{{ nuevoHistorial.apellido }}</p>
+    <fieldset>
+      <label for="">Edad</label>
+      <input
+        type="number"
+        name="edad"
+        [value]="nuevoHistorial.edad"
+        (input)="cambiarEdad($event)"
+        >
+        <p>{{ nuevoHistorial.edad }}</p>
+
+    </fieldset>
+    <fieldset>
+      <label for="">Seccion</label>
+      <input
+        type="text"
+        name="nombre"
+        [value]="nuevoHistorial.seccion"
+        (input)="cambiarSeccion($event)"
+        >
+        <p>{{ nuevoHistorial.seccion }}</p>
+
+    </fieldset>
+    <app-mostrar-imagen
+      [imagen]="nuevoHistorial.imagen"
+    ></app-mostrar-imagen>
+  </fieldset>
+  <fieldset>
+    <button
+      type="button"
+      role="button"
+      (click)="guardarHistorial()"
+    >
+      Guardar
+    </button>
+  </fieldset>
+</section>

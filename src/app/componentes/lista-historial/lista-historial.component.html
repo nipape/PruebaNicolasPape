@@ -1,0 +1,7 @@
+<section>
+  <app-historial
+    *ngFor="let item of historiales"
+    [historial]="item"
+    (idHistorial)="escucharId($event)"
+  ></app-historial>
+</section>

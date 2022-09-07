@@ -1,0 +1,17 @@
+<article>
+  <h2 *ngIf="historial.nombre; then aquiIf; else aquiElse"></h2>
+  <ng-template #aquiIf>
+    <h2>{{ historial.nombre | uppercase }}</h2>
+  </ng-template>
+  <ng-template #aquiElse>
+    <h2>Sin nombre</h2>
+  </ng-template>
+  <p *ngIf="historial.detalle; then ifDetalle; else elseDetalle"></p>
+  <ng-template #ifDetalle>
+    <p> {{ historial.detalle }} </p>
+  </ng-template>
+  <ng-template #elseDetalle>
+    <p>Sin detalle</p>
+  </ng-template>
+  <button (click)="emitirId()">Eliminar :(</button>
+</article>
